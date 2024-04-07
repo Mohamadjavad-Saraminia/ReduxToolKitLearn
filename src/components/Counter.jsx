@@ -5,7 +5,7 @@ import { increment, decrement, incrementByAmount } from "../Feautures/Counter/co
 import { useState } from "react";
 
 function Counter() {
-    const [value, setValue] = useState(2);
+    const [value, setValue] = useState(0);
     //useSelector Baraye Select kardan az Store
     //Function selector ro dar Slice minevisim in taraf Estefade mikonim 
     const counter = useSelector(selectCounter);
