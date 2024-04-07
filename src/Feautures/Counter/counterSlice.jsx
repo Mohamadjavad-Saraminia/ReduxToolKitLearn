@@ -11,20 +11,26 @@ const counterSlice = createSlice({
 
     initialState,
 
+
     reducers: {
 
-        increment: (state, action) => {
+        increment: (state) => {
             state.counterValue++;
         },
 
         decrement: (state) => {
             state.counterValue--;
         },
+        incrementByAmount: (state, action) => {
+            state.counterValue += action.payload;
+            //+= yaeni meghdare Rast ro + chap kon
+        }
+
     },
 });
 
 export default counterSlice.reducer;
-export const { increment, decrement } = counterSlice.actions;
+export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 export const selectCounter = (store) => store.counter.counterValue;
 
 
